@@ -1,0 +1,138 @@
+/* ==== 
+ --------- (4.3) footer styles start ---------
+ ==== */
+
+.footer {
+  background-color: #3c3f9c;
+  margin-top: 100px;
+  .newsletter {
+    padding: 60px 40px;
+    background-color: #493aff;
+    background-image: url("../images/news-left-bg.png"),
+      url("../images/news-right-bg.png");
+    background-size: contain, contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right bottom;
+    border-radius: 10px;
+    position: relative;
+    margin-top: -100px;
+  }
+
+  .newsletter__content {
+    display: flex;
+    align-items: center;
+    column-gap: 120px;
+    row-gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .newsletter__content-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -60px;
+      height: 90px;
+      width: 1px;
+      background-color: $white;
+    }
+    p {
+      margin-bottom: 10px;
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .newsletter__content-right {
+    h4 {
+      margin-bottom: 15px;
+    }
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .input-single {
+      flex-grow: 1;
+      input {
+        margin: 0px;
+        padding: 12px 30px;
+      }
+    }
+
+    .cmn-button {
+      border: 1px solid transparent;
+      &:hover {
+        border-color: $white;
+      }
+    }
+  }
+
+  .footer__nav {
+    padding: 60px 0px 30px;
+    border-bottom: 1px solid #ffffff50;
+  }
+
+  .footer__links {
+    ul {
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+      row-gap: 15px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      li {
+        margin-top: 0px;
+      }
+      a {
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  .footer__copy-text {
+    p {
+      margin: 0px;
+      a {
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    a {
+      @include box(40px);
+      background-color: $white;
+      color: $primary-color;
+      &:hover {
+        color: $white;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .footer__copy {
+    padding: 30px 0px;
+  }
+}
+
+/* ==== 
+ --------- (4.3) footer styles end ---------
+ ==== */

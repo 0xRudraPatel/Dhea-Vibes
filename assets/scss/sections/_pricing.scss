@@ -1,0 +1,111 @@
+/* ==== 
+  --------- (5.6) pricing section styles start ---------
+  ==== */
+
+.pricing {
+  .section__header {
+    p {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      strong {
+        color: $secondary-color;
+        background: rgba(0, 250, 235, 0.2);
+        border-radius: 10px;
+        padding: 0px 10px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .pricing__single {
+    padding: 40px 30px;
+    background: #394189;
+    border: 1px solid #464e9350;
+    border-radius: 10px;
+  }
+
+  .pricing__single-header {
+    text-align: center;
+
+    img {
+      margin-bottom: 30px;
+    }
+
+    h5 {
+      color: $white;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    h3 {
+      color: $secondary-color;
+    }
+  }
+
+  hr {
+    margin: 30px 0px;
+    opacity: 1;
+    border-color: #bababa70;
+  }
+
+  .pricing__single-features {
+    h5 {
+      margin-bottom: 30px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      color: #f2f2f2;
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+      }
+
+      i {
+        @include box(30px);
+        background-color: $secondary-color;
+        color: #2c3269;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .pricing__single-cta {
+    margin-top: 40px;
+    .cmn-button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  .great-deal {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before {
+      content: "Great Deal";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      font-size: 16px;
+      font-weight: 500;
+      height: 40px;
+      background-color: $primary-color;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-width: 200px;
+      max-width: 300px;
+      transform: translateY(25px) translateX(110px) rotateZ(50deg);
+      z-index: -1;
+    }
+  }
+}
+
+/* ==== 
+    --------- (5.6) pricing section styles end ---------
+  ==== */

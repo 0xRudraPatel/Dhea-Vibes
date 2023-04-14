@@ -1,0 +1,55 @@
+/* ==== 
+ --------- (5.1) event section styles start ---------
+ ==== */
+
+.event {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  .event__features-single {
+    text-align: center;
+    padding: 40px 30px;
+    background: #394189;
+    border: 1px solid #b9b8d150;
+    border-radius: 30px;
+    transition: $transition;
+    margin-bottom: 30px;
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      .event__features-single-thumb {
+        background-color: $white;
+        i {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .event__features-single-thumb {
+    @include box(110px);
+    background-color: $primary-color;
+    margin: 0px auto 30px;
+    transition: $transition;
+    i {
+      font-size: 34px;
+      color: $white;
+      transition: $transition;
+    }
+  }
+
+  .event__features-single-content {
+    h5 {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.1) event section styles end ---------
+ ==== */

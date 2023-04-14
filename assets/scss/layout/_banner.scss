@@ -1,0 +1,126 @@
+/* ==== 
+ --------- (4.2) banner styles start ---------
+ ==== */
+
+//  hero banner
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-color: $theme-bg;
+
+  .hero__content {
+    h5 {
+      color: $secondary-color;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .hero__content-cta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    .cmn-alt {
+      border: 1px solid #a39ec0;
+      background-color: transparent;
+      &::before,
+      &::after {
+        width: 0%;
+      }
+
+      &:hover {
+        color: $white;
+        border-color: $primary-color;
+        &::before,
+        &::after {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .slick-slider {
+    position: static;
+  }
+
+  .slick-list {
+    min-width: 700px;
+    max-width: 700px;
+    position: static;
+    img {
+      width: 100%;
+      min-height: 420px;
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 40px;
+    z-index: 8;
+
+    li {
+      cursor: pointer;
+      margin: 0px;
+    }
+
+    button {
+      background-color: transparent;
+      cursor: pointer !important;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      color: #eff1ff;
+      font-family: $theme-font;
+      transform: rotate(90deg);
+    }
+
+    .slick-active {
+      padding-bottom: 100px;
+      button {
+        color: #00faeb;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          left: calc(100% + 60px);
+          transform: translateX(-50%) rotate(90deg);
+          width: 1px;
+          height: 80px;
+          background-color: #eff1ff;
+        }
+      }
+    }
+  }
+
+  .bot-arrow {
+    @include box(100px);
+    display: inline-flex;
+    border-radius: 0px;
+    background-color: $primary-color;
+    position: absolute;
+    transform: translate(-100%, -100%);
+  }
+}
+
+/* ==== 
+ --------- (4.2) banner styles end ---------
+ ==== */

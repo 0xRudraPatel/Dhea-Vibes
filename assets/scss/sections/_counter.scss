@@ -1,0 +1,44 @@
+/* ==== 
+ --------- (5.5) counter section styles start ---------
+ ==== */
+
+.counter {
+  .counter-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .title {
+    font-size: 90px;
+    line-height: 100px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      margin-top: 0px;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+// experts
+.experts {
+  .section__content-cta {
+    i {
+      font-size: 34px;
+    }
+  }
+}
+
+/* ==== 
+ --------- (5.5) counter section styles end ---------
+ ==== */

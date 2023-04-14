@@ -1,0 +1,195 @@
+/* ==== 
+ --------- (2.3) global styles start ---------
+ ==== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0px;
+  outline: 0px;
+}
+
+.unset {
+  max-width: unset;
+}
+
+.mfp-wrap {
+  z-index: 999999999999 !important;
+}
+
+.bg-img {
+  @include background($theme-color, no-repeat, cover, center center);
+}
+
+.dir-rtl {
+  direction: rtl;
+}
+
+.slick-slide {
+  margin: 0px 12px;
+
+  img {
+    display: inline-block;
+  }
+}
+
+.slick-list {
+  margin: 0px -12px;
+}
+
+.section {
+  padding: 120px 0px;
+}
+
+.section--space-top {
+  padding-bottom: 0px;
+}
+
+.section--space-bottom {
+  padding-top: 0px;
+}
+
+.section__row {
+  margin-bottom: -30px;
+}
+
+.section__col {
+  margin-bottom: 30px;
+}
+
+.section__cta {
+  margin-top: 60px;
+}
+
+// section header
+.section__header {
+  text-align: center;
+  margin-bottom: 58px;
+
+  .section__header-sub-title {
+    color: $secondary-color;
+    margin-bottom: 25px;
+  }
+
+  .section__header-title {
+    color: $white;
+    margin-bottom: 20px;
+  }
+}
+
+// section content
+.section__content {
+  h5 {
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: $secondary-color;
+  }
+
+  .section__content-title {
+    color: $white;
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-bottom: 25px;
+    &:nth-last-of-type(1) {
+      margin-bottom: 0px;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    li {
+      width: calc(50% - 10px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  .section__content-cta {
+    margin-top: 40px;
+  }
+}
+
+i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modeSwitcher {
+  position: relative;
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+    &:checked + {
+      .label {
+        .ball {
+          transform: translateX(20px) translateY(-50%);
+          background-color: $white;
+          margin: 0px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            background-color: #493aff;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            bottom: 50%;
+            left: -5%;
+            transform: translateY(50%);
+          }
+        }
+      }
+    }
+  }
+
+  .label {
+    background-color: #493aff;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0;
+    position: relative;
+    height: auto;
+    width: 50px;
+
+    .fa-moon {
+      color: #493aff;
+    }
+
+    .ball {
+      background-color: $white;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 3px;
+      height: 20px;
+      width: 20px;
+      transform: translateX(0px) translateY(-50%);
+      transition: transform 0.2s linear;
+      margin: 0px !important;
+    }
+  }
+}
+
+
+.nav__uncollapsed-inner {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ==== 
+ --------- (2.3) global styles end ---------
+ ==== */

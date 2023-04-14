@@ -1,0 +1,782 @@
+/* ==== 
+ --------- (6.0) responsive styles start ---------
+ ==== */
+
+@media only screen and (max-width: 1399px) {
+  // conference
+  .conference {
+    .conference__single-location {
+      padding: 30px 20px 0px;
+      p {
+        &::before {
+          content: none;
+        }
+      }
+    }
+
+    .conference__single-speaker {
+      padding: 10px 20px;
+      margin-top: 40px;
+    }
+
+    .conference__single-content {
+      padding: 30px 20px;
+    }
+  }
+
+  // counter
+  .counter {
+    .title {
+      font-size: 60px;
+      line-height: 70px;
+    }
+  }
+
+  // experience
+  .experience {
+    .experience__single {
+      background-size: 25%;
+    }
+  }
+
+
+
+  // footer
+  .footer {
+    .newsletter__content {
+      row-gap: 20px;
+    }
+
+    .newsletter__content-left {
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  // paragraph styles
+  p,
+  th,
+  td,
+  li,
+  input,
+  textarea,
+  select,
+  label,
+  blockquote,
+  span {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .primary-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  // link styles
+  a,
+  button {
+    font-size: 16px;
+  }
+
+  // heading styles
+  h1,
+  .hero__content-title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-top: -7px;
+  }
+
+  h2,
+  .section__content-title,
+  .section__header-title {
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: -7px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 40px;
+    margin-top: -6px;
+  }
+
+  h4 {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: -6px;
+  }
+
+  h5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  // header
+  .header {
+    .nav__menu {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      bottom: 0px;
+      min-width: 300px;
+      max-width: 300px;
+      height: 100vh;
+      z-index: 99;
+      overflow-x: clip;
+      overflow-y: auto;
+      padding: 40px 20px;
+      background: #181830;
+      box-shadow: 0px 4px 4px $black;
+      transform: translateX(-110%);
+      transition: 0.3s ease-in-out;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+    }
+
+    .nav__menu-logo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      gap: 20px;
+
+      .nav__menu-close {
+        font-size: 30px;
+        color: $theme-color;
+      }
+    }
+
+    .nav__menu-active {
+      transform: translateX(0px);
+    }
+
+    .nav__menu-items {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav__menu-item {
+      width: 100%;
+      margin-bottom: 5px;
+
+      &:nth-last-of-type(1) {
+        margin-bottom: 0px;
+        margin-top: 20px;
+
+        .cmn-button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+
+    .nav__menu-item--dropdown {
+      .nav__dropdown {
+        position: static;
+        transform: translateY(0px);
+        padding: 20px;
+        margin-top: 5px;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav__dropdown-active {
+        display: block !important;
+        animation: atg 0.4s ease-in-out;
+      }
+
+      @keyframes atg {
+        0% {
+          transform: translateY(-10px);
+        } 100% {
+          transform: translateY(0px);
+        }
+      }
+
+      .nav__menu-link--dropdown {
+        &:hover {
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+      }
+
+      .nav__menu-link--dropdown-active {
+        color: $primary-color !important;
+
+        &::after {
+          transform: rotate(180deg) !important;
+        }
+      }
+    }
+
+    .nav__menu-link {
+      width: 100%;
+      background-color: #ffffff1f;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      a {
+        @include box(40px);
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .backdrop {
+    display: block;
+  }
+
+  // event
+  .event {
+    .event__features-single {
+      padding: 30px 20px;
+    }
+
+    .event__features-single-thumb {
+      @include box(80px);
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+
+  // sponsor
+  .sponsor {
+    .sponsor__items {
+      &::before {
+        left: -60px;
+      }
+    }
+  }
+
+  // ticket modal
+  .ticket-modal {
+    .select-package-wrapper {
+      flex-wrap: wrap;
+    }
+
+    .select-package {
+      width: calc(50% - 10px);
+    }
+  }
+
+
+  .conference {
+    
+    .conference__single-speaker {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .conference__single-location {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  // global styles
+  .section {
+    padding: 100px 0px;
+  }
+
+  .section--space-top {
+    padding-bottom: 0px;
+  }
+
+  .section--space-bottom {
+    padding-top: 0px;
+  }
+
+  .unset {
+    max-width: 75%;
+    height: auto;
+  }
+
+  .dir-rtl {
+    direction: ltr;
+  }
+
+  // hero
+  .hero {
+    padding: 180px 0px 120px;
+
+    .slick-dots {
+      top: 80%;
+      transform: translateY(-80%);
+    }
+
+    .bot-arrow {
+      @include box(60px);
+      display: inline-flex;
+      border-radius: 0px;
+      transform: translate(20px, -50%);
+    }
+  }
+
+  // event
+  .event {
+    padding-top: 0px !important;
+  }
+
+  // speaker
+  .speaker {
+    .section__header-cta {
+      justify-content: flex-start;
+    }
+  }
+
+  // conference
+  .conference {
+    .conference__tab-btn {
+      padding: 10px 15px;
+      span {
+        &:nth-of-type(1) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  // location
+  .location {
+    .location__content {
+      text-align: center;
+      .location__content-map {
+        margin-top: 40px;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .location__content-map-content {
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section__content-cta {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  // experts
+  .experts {
+    .unset {
+      max-width: 100%;
+    }
+  }
+
+  // sponsor
+  .sponsor {
+    .sponsor__items-single {
+      h4 {
+        margin-bottom: 20px;
+        font-size: 26px;
+        line-height: 36px;
+      }
+    }
+
+    .sponsor__items {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  // ticket modal
+  .ticket-modal {
+    .input-single-group {
+      flex-direction: column;
+      .input-single {
+        width: 100%;
+      }
+    }
+  }
+
+  // scroll to top
+  .progress-wrap {
+    right: 15px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  // heading styles
+  h1,
+  .hero__content-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  h2,
+  .section__content-title,
+  .section__header-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  h4 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  h5 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  h6 {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  // global styles
+  .section {
+    padding: 80px 0px;
+  }
+
+  .section--space-top {
+    padding-bottom: 0px;
+  }
+
+  .section--space-bottom {
+    padding-top: 0px;
+  }
+
+  .section__header {
+    margin-bottom: 40px;
+  }
+
+  .section__cta {
+    margin-top: 40px;
+  }
+
+  // buttons
+  .cmn-button {
+    padding: 10px 20px;
+  }
+
+  // header
+  .header {
+    .nav {
+      padding: 24px 0px 24px;
+    }
+  }
+
+  // hero
+  .hero {
+    padding-top: 150px;
+    .slick-list {
+      min-width: auto;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .slick-dots {
+      right: 20px;
+      .slick-active {
+        padding-bottom: 40px;
+        button {
+          &::before {
+            height: 40px;
+            left: calc(100% + 33px);
+          }
+        }
+      }
+    }
+  }
+
+  // contact
+  .contact {
+    .contact__content {
+      .contact__content-social {
+        margin-bottom: 40px;
+      }
+    }
+
+    .contact__form {
+      padding: 30px 12px;
+      h5 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .input-single {
+    input,
+    textarea {
+      padding: 12px 16px;
+    }
+  }
+
+  // footer
+  .footer {
+    .newsletter {
+      background-size: auto, auto;
+      background-position: left bottom, right top;
+      padding: 40px 20px;
+    }
+
+    form {
+      gap: 20px;
+      .input-single {
+        input {
+          padding: 8px 16px;
+        }
+      }
+    }
+
+    .footer__logo {
+      text-align: center;
+    }
+
+    .footer__links {
+      margin-top: 25px;
+      ul {
+        justify-content: center;
+      }
+    }
+
+    .footer__copy-text {
+      p {
+        text-align: center;
+      }
+    }
+
+    .social {
+      justify-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  // ticket modal
+  .ticket-modal {
+    padding: 80px 0px;
+    .ticket-modal-container {
+      padding: 60px 20px 40px;
+    }
+    .select-package-wrapper {
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .select-package {
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .select-ticket-package {
+      padding: 30px 15px;
+      .h4 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // conference modal
+  .conference-modal {
+    .conference-modal-wrapper {
+      padding: 40px 20px;
+    }
+
+    .con-mod-group {
+      margin-bottom: 40px;
+    }
+
+    .con-mod-author {
+      padding: 30px 20px;
+      flex-wrap: wrap;
+    }
+  }
+
+  #modeSwitcher {
+    .label {
+      transform: scale(1) !important;
+    }
+  }
+
+  .experience__single {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  // heading styles
+  h1,
+  .hero__content-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  h2,
+  .section__content-title,
+  .section__header-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .section__content {
+    .section__content-title {
+      margin-bottom: 20px;
+    }
+
+    .section__content-cta {
+      margin-top: 30px;
+    }
+  }
+
+  // event
+  .event {
+    .event__features-single {
+      &:nth-of-type(1) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  // speaker
+  .speaker {
+    .section__header-cta {
+      flex-direction: column;
+      .cmn-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  // conference
+  .conference {
+    .conference__tabs {
+      flex-wrap: wrap;
+    }
+  }
+
+  // counter
+  .counter {
+    .title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  // sponsor
+  .sponsor {
+    .sponsor__item {
+      img {
+        max-width: 110px;
+      }
+    }
+  }
+
+  // pricing
+  .pricing {
+    .pricing__single {
+      padding: 30px 20px;
+    }
+  }
+
+  // contact
+  .contact {
+    .contact__content {
+      .contact__content-info {
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  // ticket modal
+  .ticket-modal {
+    .select-package {
+      width: 100%;
+    }
+  }
+
+  // footer
+  .footer {
+    form {
+      flex-direction: column;
+      align-items: flex-start;
+      .input-single {
+        width: 100%;
+      }
+    }
+  }
+
+  .nav__uncollapsed {
+    gap: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 424px) {
+  // hero
+  .hero {
+    .hero__content {
+      h5 {
+        margin-bottom: 20px;
+      }
+
+      .hero__content-cta {
+        margin-top: 30px;
+      }
+
+      .cmn-button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+
+  // experience
+  .experience {
+    .experience__single {
+      padding: 30px 20px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1200px) {
+  .header .nav__menu-item--dropdown .nav__dropdown {
+    display: block !important;
+  }
+}
+/* ==== 
+  --------- (6.0) responsive styles end ---------
+  ==== */
