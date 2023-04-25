@@ -132,6 +132,66 @@
       $(".conference-modal").slideUp();
       $("body").removeClass("body-active");
     });
+    
+    // conference details modal - 2
+
+    $(".open-conference-2").on("click", function () {
+      $(".conference-modal-2").slideDown();
+      $("body").addClass("body-active");
+    });
+
+    $(".close-conference-2").on("click", function () {
+      $(".conference-modal-2").slideUp();
+      $("body").removeClass("body-active");
+    });
+
+    // conference details modal - 3
+
+    $(".open-conference-3").on("click", function () {
+      $(".conference-modal-3").slideDown();
+      $("body").addClass("body-active");
+    });
+
+    $(".close-conference-3").on("click", function () {
+      $(".conference-modal-3").slideUp();
+      $("body").removeClass("body-active");
+    });
+
+    // conference details modal - 4
+
+    $(".open-conference-4").on("click", function () {
+      $(".conference-modal-4").slideDown();
+      $("body").addClass("body-active");
+    });
+
+    $(".close-conference-4").on("click", function () {
+      $(".conference-modal-4").slideUp();
+      $("body").removeClass("body-active");
+    });
+
+    // conference details modal - 5
+
+    $(".open-conference-5").on("click", function () {
+      $(".conference-modal-5").slideDown();
+      $("body").addClass("body-active");
+    });
+
+    $(".close-conference-5").on("click", function () {
+      $(".conference-modal-5").slideUp();
+      $("body").removeClass("body-active");
+    });
+
+    // conference details modal - 6
+
+    $(".open-conference-6").on("click", function () {
+      $(".conference-modal-6").slideDown();
+      $("body").addClass("body-active");
+    });
+
+    $(".close-conference-6").on("click", function () {
+      $(".conference-modal-6").slideUp();
+      $("body").removeClass("body-active");
+    });
 
     // scroll to top with progress
     var progressPath = document.querySelector(".progress-wrap path");
